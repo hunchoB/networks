@@ -1,0 +1,41 @@
+For autentification usual use AAA (autentification, autorization and accounting) server. It's use oun protocols like RADIUS or TACACS+.
+The SSH server uses the fully qualified domain name (FQDN) of the switch as input to create that key. The switch creates the FQDN from the hostname and domain name of the switch.
+Telnet don't use.
+To configure this, we need print the next commands:
+1)transport input all
+2)transport input none
+3)transport input telnet
+4)transport input ssh
+
+Useful commands giving more information about SSH server
+# show ip ssh
+# show ssh
+
+SNMP - simple network management protocol 
+NIC - network interface card
+SVI- switch virtual interface or VLAN interface 
+Note that you should not try to use a VLAN interface for which there are no physical ports assigned to the same VLAN.
+
+To see all VLANs configure type:
+# show vlans 
+
+To check IPv4 configuration use:
+# show running-config
+or
+# show interfaces vlan VlanNumber
+and
+# show ip default-gateway
+if use dhcp
+# show dhcp lease
+Switch don't store the DHCP-learned IP configuration
+
+To watch your command history:
+# show history
+and set terminal history
+# terminal history X
+
+# no logging console
+# logging console
+# logging synchronous
+# exec-timeout minutes(0) seconds(0)
+# no ip domain-lookup
