@@ -1,0 +1,24 @@
+For PC:
+    PC_1: 
+    ip 192.168.0.10 255.255.255.0 192.168.0.1
+    save
+    PC_2: 
+    ip 192.168.20.10 255.255.255.0 192.168.20.1
+    save
+    PC_3: 
+    ip 192.168.30.10 255.255.255.0 192.168.30.1
+    save
+For S:
+    S1:
+    ! to open config print
+    configure terminal
+    ! to change hostname print
+    hostname yourname
+    ! to open config print
+    configure terminal
+    ! to set password
+    enable secret switch1
+    ! to show the resulting configuration
+    show running-config
+    ! to Save the Configuration
+    copy running-config startup-config
