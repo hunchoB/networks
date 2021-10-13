@@ -22,3 +22,33 @@ For S:
     show running-config
     ! to Save the Configuration
     copy running-config startup-config
+
+    SSH:
+    ! hostname and domain name REQUIRE
+    ! set domain name
+    # ip domain-name lab1.com
+    ! generate key
+    # crypto key generate rsa 
+    ! size of key
+    # 2048
+    ! set the SSH version 2
+    # ip ssh version 2
+    ! configure vty lines
+    # line vty 0 4
+    # login local
+    # exit
+        !! disable transport protocols
+        #transport input ssh
+    ! define credentials
+    # username hunchob secret switch1
+
+    Set SNMP VLAN:
+    # configure terminal
+    # interface vlan 1
+    # ip address 192.168.0.30 255.255.255.0
+    # no shutdown
+    # exit 
+    # ip default-gateway 192.168.0.1
+        ! To set dhcp type into vlan settings next command:
+        ip address dhcp
+    
