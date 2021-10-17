@@ -52,3 +52,37 @@ For S:
         ! To set dhcp type into vlan settings next command:
         ip address dhcp
     
+    Creating VLAN:
+    # configure terminal
+    # vlan 10
+    # name From_PC1_to_PC11
+    # exit
+    # interface range ethernet 0/1 - 2
+    # switchport access vlan 10
+    # switchport mode access
+    # end
+    Now check your VLANs list
+
+    Up trunk port:
+    # config t
+    # int eth 0/0 
+    #  switchport trunk encapsulation {dot1q | isl | negotiate}
+    # switchport mode {trunk | dinmaic auto | dynamic desirable | access}
+
+    To see trunk info:
+    #  show interfaces gigabit 0/1 switchport
+    # show interfaces trunk 
+
+    On the switches see mac address table:
+    # show mac address-table 
+    To clear this tables print:
+    # clear mac address-table {dynamic| entry | type}
+    
+    To remove VLAN from trunk:
+    # switchport trunk allowed vlan remove 50 
+    To add VLAN to trunk:
+    # switchport trunk vlan add 50
+
+
+switchport trunk allowed vlan 64-126,300-301,303,332-333,667-670
+switchport trunk allowed vlan add 888-889,900,998
