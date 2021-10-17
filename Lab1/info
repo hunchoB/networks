@@ -39,3 +39,16 @@ and set terminal history
 # logging synchronous
 # exec-timeout minutes(0) seconds(0)
 # no ip domain-lookup
+# show interfaces
+# interface Ethernet 0/1
+# duplex full
+# speed 100
+# description *****
+# show interfaces status
+# interface range FastEthernet 0/11 - 20
+# shutdown (shut) and no shutdown (no shut)
+# show interfaces description
+
+
+Show settings of VLANs: (it means that switch assignes all port to VLAN 1)
+# show vlan brief
